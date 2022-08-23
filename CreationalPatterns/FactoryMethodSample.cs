@@ -16,78 +16,124 @@ namespace DesignPatternExamples.CreationalPatterns
         public static void Create()
         {
 
-            Creator[] creators = new Creator[2];
-            creators[0] = new ConcreteCreatorA();
-            creators[0].TypeId = 1;
-            creators[0].CreatorName = "A type";
-
-
-            creators[1] = new ConcreteCreatorB();
-            creators[1].TypeId = 2;
-            creators[1].CreatorName = "B type";
-
-
-            // Iterate over creators and create products
-            foreach (Creator creator in creators)
+            // Note: constructors call Factory Method
+            Document[] documents = new Document[2];
+            documents[0] = new Resume();
+            documents[1] = new Report();
+            // Display document pages
+            foreach (Document document in documents)
             {
-                Product product = creator.FactoryMethod();
-                //Console.WriteLine("Created {0}", product.GetType().Name);
-                Console.WriteLine("Created Creator {0} Product {1} ", creator.CreatorName, product.ProductName);
+                Console.WriteLine("\n" + document.GetType().Name + "--");
+                foreach (Page page in document.Pages)
+                {
+                    Console.WriteLine(" " + page.GetType().Name);
+                }
             }
+
         }
 
 
     }
 
-
     /// <summary>
     /// The 'Product' abstract class
     /// </summary>
-    abstract class Product
-    {
-        public string? ProductName { get; set; }
-    }
-    /// <summary>
-    /// A 'ConcreteProduct' class
-    /// </summary>
-    class ConcreteProductA : Product
+    abstract class Page
     {
     }
     /// <summary>
     /// A 'ConcreteProduct' class
     /// </summary>
-    class ConcreteProductB : Product
+    class SkillsPage : Page
+    {
+    }
+    /// <summary>
+    /// A 'ConcreteProduct' class
+    /// </summary>
+    class EducationPage : Page
+    {
+    }
+    /// <summary>
+    /// A 'ConcreteProduct' class
+    /// </summary>
+    class ExperiencePage : Page
+    {
+    }
+    /// <summary>
+    /// A 'ConcreteProduct' class
+    /// </summary>
+    class IntroductionPage : Page
+    {
+    }
+    /// <summary>
+    /// A 'ConcreteProduct' class
+    /// </summary>
+    class ResultsPage : Page
+    {
+    }
+    /// <summary>
+    /// A 'ConcreteProduct' class
+    /// </summary>
+    class ConclusionPage : Page
+    {
+    }
+    /// <summary>
+    /// A 'ConcreteProduct' class
+    /// </summary>
+    class SummaryPage : Page
+    {
+    }
+    /// <summary>
+    /// A 'ConcreteProduct' class
+    /// </summary>
+    class BibliographyPage : Page
     {
     }
 
     /// <summary>
     /// The 'Creator' abstract class
     /// </summary>
-    abstract class Creator
+    abstract class Document
     {
-        public int TypeId { get; set; }
-        public string? CreatorName { get; set; }
-
-        public abstract Product FactoryMethod();
+        private List<Page> _pages = new List<Page>();
+        // Constructor calls abstract Factory method
+        public Document()
+        {
+            this.CreatePages();
+        }
+        public List<Page> Pages
+        {
+            get { return _pages; }
+        }
+        // Factory Method
+        public abstract void CreatePages();
     }
     /// <summary>
     /// A 'ConcreteCreator' class
     /// </summary>
-    class ConcreteCreatorA : Creator
+    class Resume : Document
     {
-        public override Product FactoryMethod()
+        // Factory Method implementation
+        public override void CreatePages()
         {
-            return new ConcreteProductA() { ProductName = "TypeA"};
+            Pages.Add(new SkillsPage());
+            Pages.Add(new EducationPage());
+            Pages.Add(new ExperiencePage());
         }
     }
     /// <summary>
     /// A 'ConcreteCreator' class
     /// </summary>
-    class ConcreteCreatorB : Creator
+    class Report : Document
     {
-        public override Product FactoryMethod()
+        // Factory Method implementation
+        public override void CreatePages()
         {
-            return new ConcreteProductB() { ProductName = "TypeB" }; 
+            Pages.Add(new IntroductionPage());
+            Pages.Add(new ResultsPage());
+            Pages.Add(new ConclusionPage());
+            Pages.Add(new SummaryPage());
+            Pages.Add(new BibliographyPage());
         }
     }
 
