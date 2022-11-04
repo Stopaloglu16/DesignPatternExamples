@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatternExamples.StructuralPatterns
+﻿namespace DesignPatternExamples.StructuralPatterns
 {
 
     public class DecoratorSample
@@ -16,11 +10,11 @@ namespace DesignPatternExamples.StructuralPatterns
             // Create book
             Book book = new Book("Worley", "Inside ASP.NET", 10);
             book.Display();
-            
+
             // Create video
             Video video = new Video("Spielberg", "Jaws", 23, 92);
             video.Display();
-            
+
             // Make video borrowable, then borrow and display
             Console.WriteLine("\nMaking video borrowable:");
             Borrowable borrowvideo = new Borrowable(video);

@@ -10,9 +10,10 @@ var myPatterns = DesignPatternExamples.DesignPatterList.GetList();
 DesignPatternExamples.DesignPatterList.WriteList(myPatterns);
 
 
+
 while (true)
 {
-    
+
     var myEntry = Console.ReadLine();
 
     if (int.TryParse(myEntry, out int value))
@@ -23,9 +24,14 @@ while (true)
             case 1:
                 AbstractFactoryCreate.Create();
                 break;
-
+            case 2:
+                BuilderCreate.Create(); 
+                break;
             case 3:
                 FactoryMethodCreate.Create();
+                break;
+            case 4:
+                PrototypeSampleCreate.Create();
                 break;
 
 
@@ -63,7 +69,7 @@ while (true)
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("===============Pls choose your design!!!===============");
         Console.ForegroundColor = ConsoleColor.White;
-        
+
     }
 }
 

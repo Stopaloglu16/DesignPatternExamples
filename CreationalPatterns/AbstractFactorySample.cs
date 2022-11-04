@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatternExamples.CreationalPatterns
+﻿namespace DesignPatternExamples.CreationalPatterns
 {
 
     public class AbstractFactoryCreate
@@ -81,7 +75,7 @@ namespace DesignPatternExamples.CreationalPatterns
             return new Wolf();
         }
 
-     
+
     }
 
     /// <summary>
@@ -104,7 +98,7 @@ namespace DesignPatternExamples.CreationalPatterns
     class Wildebeest : Herbivore
     {
     }
-  
+
     /// <summary>
     /// The 'ProductB1' class
     /// </summary>
@@ -113,18 +107,18 @@ namespace DesignPatternExamples.CreationalPatterns
         public override void Eat(Herbivore h)
         {
             // Eat Wildebeest
-            Console.WriteLine(this.GetType().Name +
-              " eats " + h.GetType().Name);
+            Console.WriteLine(this.GetType().Name + " eats " + h.GetType().Name);
         }
 
     }
-    
+
     /// <summary>
     /// The 'ProductA2' class
     /// </summary>
     class Bison : Herbivore
     {
     }
+
     /// <summary>
     /// The 'ProductB2' class
     /// </summary>
@@ -138,6 +132,6 @@ namespace DesignPatternExamples.CreationalPatterns
         }
     }
 
- 
+
 
 }
