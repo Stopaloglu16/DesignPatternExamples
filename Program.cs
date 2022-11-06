@@ -2,7 +2,7 @@
 using DesignPatternExamples.CreationalPatterns;
 using DesignPatternExamples.StructuralPatterns;
 
-Console.WriteLine("Welcome desing patters");
+Console.WriteLine("Welcome to desing patters");
 
 var myPatterns = DesignPatternExamples.DesignPatterList.GetList();
 
@@ -32,6 +32,9 @@ while (true)
                 break;
             case 4:
                 PrototypeSampleCreate.Create();
+                break;
+            case 5:
+                SingletonSampleCreate.Create();
                 break;
 
 
@@ -67,11 +70,9 @@ while (true)
         DesignPatternExamples.DesignPatterList.WriteList(myPatterns);
 
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("===============Pls choose your design!!!===============");
+        Console.WriteLine("============Pls choose your design to run!============");
         Console.ForegroundColor = ConsoleColor.White;
 
     }
 }
-
-
 

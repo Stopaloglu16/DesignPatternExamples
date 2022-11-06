@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternExamples.StructuralPatterns.AbstractRemoteControl">
+    <Position X="10.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABACAAAAAgAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>StructuralPatterns\BridgeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.SamsungLedTv" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>StructuralPatterns\BridgeSample.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.SonyLedTv" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>StructuralPatterns\BridgeSample.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.SamsungRemoteControl">
+    <Position X="11.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>StructuralPatterns\BridgeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.SonyRemoteControl">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>StructuralPatterns\BridgeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DesignPatternExamples.StructuralPatterns.LEDTV">
+    <Position X="13.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>StructuralPatterns\BridgeSample.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

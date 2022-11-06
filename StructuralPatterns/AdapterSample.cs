@@ -2,6 +2,7 @@
 {
     public class AdapterSample
     {
+        //Chemical compound objects access the databank through an Adapter interface.
 
         public static void Create()
         {
@@ -15,10 +16,7 @@
             benzene.Display();
             Compound ethanol = new RichCompound("Ethanol");
             ethanol.Display();
-            // Wait for user
-            Console.ReadKey();
         }
-
     }
 
     /// <summary>
@@ -81,8 +79,7 @@
                     default: return 0f;
                 }
             }
-            // Boiling Point
-            else
+            else // Boiling Point
             {
                 switch (compound.ToLower())
                 {
@@ -93,6 +90,7 @@
                 }
             }
         }
+
         public string GetMolecularStructure(string compound)
         {
             switch (compound.ToLower())
@@ -103,6 +101,7 @@
                 default: return "";
             }
         }
+
         public double GetMolecularWeight(string compound)
         {
             switch (compound.ToLower())
