@@ -1,10 +1,13 @@
-﻿namespace DesignPatternExamples.StructuralPatterns
+﻿using System;
+
+namespace DesignPatternExamples.StructuralPatterns
 {
     public class CompositeSample
     {
 
         public static void Create()
         {
+            
 
             // Create a tree structure 
             CompositeElement root = new CompositeElement("Picture");
@@ -18,21 +21,18 @@
             comp.Add(new PrimitiveElement("White Circle"));
             root.Add(comp);
 
+
             // Add and remove a PrimitiveElement
             PrimitiveElement pe = new PrimitiveElement("Yellow Line");
+            //pe.Add(new PrimitiveElement("Yellow Circle")); //Cannot add to a PrimitiveElement
             root.Add(pe);
             root.Remove(pe);
 
             // Recursively display nodes
             root.Display(1);
 
-            // Wait for user
-            Console.ReadKey();
-
         }
-
     }
-
 
 
     /// <summary>
@@ -50,6 +50,7 @@
         public abstract void Remove(DrawingElement d);
         public abstract void Display(int indent);
     }
+    
     /// <summary>
     /// The 'Leaf' class
     /// </summary>
@@ -76,6 +77,7 @@
                 new String('-', indent) + " " + name);
         }
     }
+
     /// <summary>
     /// The 'Composite' class
     /// </summary>
@@ -106,4 +108,5 @@
             }
         }
     }
+
 }

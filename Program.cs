@@ -3,12 +3,12 @@ using DesignPatternExamples.CreationalPatterns;
 using DesignPatternExamples.StructuralPatterns;
 
 Console.WriteLine("Welcome to desing patters");
+Console.WriteLine(new String('-', 30));
 
 var myPatterns = DesignPatternExamples.DesignPatterList.GetList();
 
 
 DesignPatternExamples.DesignPatterList.WriteList(myPatterns);
-
 
 
 while (true)
@@ -37,19 +37,18 @@ while (true)
                 SingletonSampleCreate.Create();
                 break;
 
-
             case 6:
                 AdapterSample.Create();
                 break;
-
+            case 7:
+                BridgeSample.Create();
+                break;
             case 8:
                 CompositeSample.Create();
                 break;
-
             case 9:
                 DecoratorSample.Create();
                 break;
-
 
 
             case 0:
