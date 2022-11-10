@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternExamples.StructuralPatterns.LibraryItem">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>StructuralPatterns\DecoratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Book">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\DecoratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Video">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAQAAQAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\DecoratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Decorator">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\DecoratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Borrowable">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\DecoratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

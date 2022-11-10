@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DesignPatternExamples.StructuralPatterns.DrawingElement">
-    <Position X="10.5" Y="2.25" Width="1.5" />
+    <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAABQAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StructuralPatterns\CompositeSample.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesignPatternExamples.StructuralPatterns.PrimitiveElement">
-    <Position X="9.25" Y="5" Width="1.5" />
+    <Position X="4" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StructuralPatterns\CompositeSample.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DesignPatternExamples.StructuralPatterns.CompositeElement">
-    <Position X="11.75" Y="4.5" Width="1.5" />
+    <Position X="6.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAABAAAAAABQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StructuralPatterns\CompositeSample.cs</FileName>

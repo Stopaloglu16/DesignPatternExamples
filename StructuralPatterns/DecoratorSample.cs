@@ -22,8 +22,9 @@
             borrowvideo.BorrowItem("Customer #2");
             borrowvideo.Display();
 
-            // Wait for user
-            Console.ReadKey();
+            Borrowable borrowBook = new Borrowable(book);
+            borrowBook.BorrowItem("Customer #3");
+            borrowBook.Display();
 
         }
     }
