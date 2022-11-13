@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternExamples.StructuralPatterns.Bank">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\FacadeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Credit">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\FacadeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Loan">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\FacadeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Customer">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\FacadeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.StructuralPatterns.Mortgage">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAIAAAAAAAAAIQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructuralPatterns\FacadeSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

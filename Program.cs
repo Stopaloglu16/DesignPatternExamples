@@ -49,6 +49,13 @@ while (true)
             case 9:
                 DecoratorSample.Create();
                 break;
+            case 10:
+                FacadeSample.Create();
+                break;
+            case 11:
+                FlyweightSample.Create();
+                break;
+
 
 
             case 0:
