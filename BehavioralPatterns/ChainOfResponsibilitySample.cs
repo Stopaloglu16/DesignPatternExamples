@@ -4,12 +4,11 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// <summary>
     /// Chain of Responsibility Design Pattern
     /// </summary>
-    public class ChainOfResponsibility
+    public class ChainOfResponsibilitySample
     {
         public static void Create()
         {
             // Setup Chain of Responsibility
-
             Approver larry = new Director();
             Approver sam = new VicePresident();
             Approver tammy = new President();
@@ -18,7 +17,6 @@ namespace DesignPatternExamples.BehavioralPatterns
             sam.SetSuccessor(tammy);
 
             // Generate and process purchase requests
-
             Purchase p = new Purchase(2034, 350.00, "Supplies");
             larry.ProcessRequest(p);
 
@@ -33,7 +31,6 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// <summary>
     /// The 'Handler' abstract class
     /// </summary>
-
     public abstract class Approver
     {
         protected Approver successor;
@@ -49,11 +46,11 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// <summary>
     /// The 'ConcreteHandler' class
     /// </summary>
-
     public class Director : Approver
     {
         public override void ProcessRequest(Purchase purchase)
         {
+            Console.WriteLine("Director...");
             if (purchase.Amount < 10000.0)
             {
                 Console.WriteLine("{0} approved request# {1}",
@@ -69,11 +66,12 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// <summary>
     /// The 'ConcreteHandler' class
     /// </summary>
-
     public class VicePresident : Approver
     {
+        
         public override void ProcessRequest(Purchase purchase)
         {
+            Console.WriteLine("VicePresident...");
             if (purchase.Amount < 25000.0)
             {
                 Console.WriteLine("{0} approved request# {1}",
@@ -89,11 +87,12 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// <summary>
     /// The 'ConcreteHandler' class
     /// </summary>
-
     public class President : Approver
     {
+        
         public override void ProcessRequest(Purchase purchase)
         {
+            Console.WriteLine("President...");
             if (purchase.Amount < 100000.0)
             {
                 Console.WriteLine("{0} approved request# {1}",
@@ -111,7 +110,6 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// <summary>
     /// Class holding request details
     /// </summary>
-
     public class Purchase
     {
         int number;
@@ -119,7 +117,6 @@ namespace DesignPatternExamples.BehavioralPatterns
         string purpose;
 
         // Constructor
-
         public Purchase(int number, double amount, string purpose)
         {
             this.number = number;
@@ -128,7 +125,6 @@ namespace DesignPatternExamples.BehavioralPatterns
         }
 
         // Gets or sets purchase number
-
         public int Number
         {
             get { return number; }
@@ -136,7 +132,6 @@ namespace DesignPatternExamples.BehavioralPatterns
         }
 
         // Gets or sets purchase amount
-
         public double Amount
         {
             get { return amount; }
@@ -144,7 +139,6 @@ namespace DesignPatternExamples.BehavioralPatterns
         }
 
         // Gets or sets purchase purpose
-
         public string Purpose
         {
             get { return purpose; }

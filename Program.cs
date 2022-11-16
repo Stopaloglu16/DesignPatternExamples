@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using DesignPatternExamples.BehavioralPatterns;
 using DesignPatternExamples.CreationalPatterns;
 using DesignPatternExamples.StructuralPatterns;
 
@@ -54,6 +55,11 @@ while (true)
                 break;
             case 11:
                 FlyweightSample.Create();
+                break;
+
+
+            case 12:
+                ChainOfResponsibilitySample.Create();
                 break;
 
 
