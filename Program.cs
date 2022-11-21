@@ -61,6 +61,9 @@ while (true)
             case 12:
                 ChainOfResponsibilitySample.Create();
                 break;
+            case 13:
+                CommandSample.Create();   
+                break;
 
 
 

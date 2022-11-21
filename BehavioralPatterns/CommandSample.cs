@@ -22,7 +22,6 @@ namespace DesignPatternExamples.BehavioralPatterns
 
             // Redo 3 commands
             user.Redo(3);
-
         }
     }
 
@@ -121,7 +120,6 @@ namespace DesignPatternExamples.BehavioralPatterns
     public class User
     {
         // Initializers
-
         Calculator calculator = new Calculator();
         List<Command> commands = new List<Command>();
         int current = 0;
@@ -158,12 +156,10 @@ namespace DesignPatternExamples.BehavioralPatterns
         public void Compute(char @operator, int operand)
         {
             // Create command operation and execute it
-
             Command command = new CalculatorCommand(calculator, @operator, operand);
             command.Execute();
 
             // Add command to undo list
-
             commands.Add(command);
             current++;
         }
