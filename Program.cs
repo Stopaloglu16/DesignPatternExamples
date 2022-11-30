@@ -64,6 +64,13 @@ while (true)
             case 13:
                 CommandSample.Create();   
                 break;
+            case 14:
+                IteratorSample.Create();
+                break;
+            case 15:
+                MediatorSample.Create();
+                break;
+
 
 
 

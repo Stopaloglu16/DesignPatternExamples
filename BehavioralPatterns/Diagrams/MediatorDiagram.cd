@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternExamples.BehavioralPatterns.AbstractChatroom">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\MediatorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.Chatroom">
+    <Position X="9.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAABIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\MediatorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.Participant">
+    <Position X="3.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAEAAAAQAAAAEAAAQAAAAAAAAgAA=</HashCode>
+      <FileName>BehavioralPatterns\MediatorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.Beatle">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\MediatorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.NonBeatle">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\MediatorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

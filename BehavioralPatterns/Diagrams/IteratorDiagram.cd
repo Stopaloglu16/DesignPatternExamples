@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternExamples.BehavioralPatterns.Item">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\IteratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.Collection" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACCAgAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\IteratorSample.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.Iterator" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQAAAEAAAAAAgABgAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\IteratorSample.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="DesignPatternExamples.BehavioralPatterns.IAbstractCollection">
+    <Position X="1.5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\IteratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DesignPatternExamples.BehavioralPatterns.IAbstractIterator">
+    <Position X="3.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BehavioralPatterns\IteratorSample.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
