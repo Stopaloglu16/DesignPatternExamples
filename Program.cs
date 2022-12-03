@@ -11,6 +11,13 @@ var myPatterns = DesignPatternExamples.DesignPatterList.GetList();
 
 DesignPatternExamples.DesignPatterList.WriteList(myPatterns);
 
+Dictionary<int, Action> keyValuePairs = new Dictionary<int, Action>();
+
+keyValuePairs[1]= AbstractFactoryCreate.Create;
+
+keyValuePairs[1].DynamicInvoke(args);
+//list[0].DynamicInvoke(args);
+
 
 while (true)
 {
@@ -70,6 +77,10 @@ while (true)
             case 15:
                 MediatorSample.Create();
                 break;
+            case 16:
+                MementoSample.Create();
+                break;
+
 
 
 
@@ -97,4 +108,9 @@ while (true)
 
     }
 }
+
+
+
+
+
 
