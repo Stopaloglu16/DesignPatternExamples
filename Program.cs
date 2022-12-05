@@ -11,11 +11,9 @@ var myPatterns = DesignPatternExamples.DesignPatterList.GetList();
 
 DesignPatternExamples.DesignPatterList.WriteList(myPatterns);
 
-Dictionary<int, Action> keyValuePairs = new Dictionary<int, Action>();
-
-keyValuePairs[1]= AbstractFactoryCreate.Create;
-
-keyValuePairs[1].DynamicInvoke(args);
+//Dictionary<int, Action> keyValuePairs = new Dictionary<int, Action>();
+//keyValuePairs[1] = AbstractFactoryCreate.Create;
+//keyValuePairs[1].DynamicInvoke(args);
 //list[0].DynamicInvoke(args);
 
 
@@ -33,7 +31,7 @@ while (true)
                 AbstractFactoryCreate.Create();
                 break;
             case 2:
-                BuilderCreate.Create(); 
+                BuilderCreate.Create();
                 break;
             case 3:
                 FactoryMethodCreate.Create();
@@ -69,7 +67,7 @@ while (true)
                 ChainOfResponsibilitySample.Create();
                 break;
             case 13:
-                CommandSample.Create();   
+                CommandSample.Create();
                 break;
             case 14:
                 IteratorSample.Create();
@@ -80,9 +78,12 @@ while (true)
             case 16:
                 MementoSample.Create();
                 break;
-
-
-
+            case 17:
+                ObserverSample.Create();
+                break;
+            case 18:
+                StateSample.Create();
+                break;
 
 
             case 0:

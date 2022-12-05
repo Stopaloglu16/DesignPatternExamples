@@ -68,7 +68,7 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// </summary>
     public class VicePresident : Approver
     {
-        
+
         public override void ProcessRequest(Purchase purchase)
         {
             Console.WriteLine("VicePresident...");
@@ -89,7 +89,7 @@ namespace DesignPatternExamples.BehavioralPatterns
     /// </summary>
     public class President : Approver
     {
-        
+
         public override void ProcessRequest(Purchase purchase)
         {
             Console.WriteLine("President...");

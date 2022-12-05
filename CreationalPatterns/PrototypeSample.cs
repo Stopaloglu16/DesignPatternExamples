@@ -1,6 +1,4 @@
-﻿using System.Net.WebSockets;
-
-namespace DesignPatternExamples.CreationalPatterns
+﻿namespace DesignPatternExamples.CreationalPatterns
 {
     /// <summary>
     /// Prototype Design Pattern
@@ -59,7 +57,7 @@ namespace DesignPatternExamples.CreationalPatterns
         // Create a shallow copy
         public override ColorPrototype Clone()
         {
-            Console.WriteLine("Cloning color RGB: {0,3},{1,3},{2,3}",red, green, blue);
+            Console.WriteLine("Cloning color RGB: {0,3},{1,3},{2,3}", red, green, blue);
 
             return this.MemberwiseClone() as ColorPrototype;
         }

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatternExamples.BehavioralPatterns.State">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAARAAAAAAAgAAAAMAAAgAAAAQAAAQAAAAEI=</HashCode>
+      <FileName>BehavioralPatterns\StateSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.RedState">
+    <Position X="12.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAQAAAAAAAAAEAAAACAAAQAAAAAAAAAI=</HashCode>
+      <FileName>BehavioralPatterns\StateSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.SilverState">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAQAAAAAAAAAEAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>BehavioralPatterns\StateSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.GoldState">
+    <Position X="12.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAQAAAAAAAAAEAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>BehavioralPatterns\StateSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatternExamples.BehavioralPatterns.Account">
+    <Position X="14.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAgAAAAEAAAAAAAEQAAABAAAAAI=</HashCode>
+      <FileName>BehavioralPatterns\StateSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatternExamples.BehavioralPatterns
+﻿namespace DesignPatternExamples.BehavioralPatterns
 {
-   
+
     /// <summary>
     /// Memento Design Pattern
     /// </summary>

@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace DesignPatternExamples.StructuralPatterns
+﻿namespace DesignPatternExamples.StructuralPatterns
 {
     public class CompositeSample
     {
 
         public static void Create()
         {
-            
+
 
             // Create a tree structure 
             CompositeElement root = new CompositeElement("Picture");
@@ -50,7 +48,7 @@ namespace DesignPatternExamples.StructuralPatterns
         public abstract void Remove(DrawingElement d);
         public abstract void Display(int indent);
     }
-    
+
     /// <summary>
     /// The 'Leaf' class
     /// </summary>

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DesignPatternExamples.StructuralPatterns
+﻿namespace DesignPatternExamples.StructuralPatterns
 {
     public class FacadeSample
     {
@@ -13,7 +11,7 @@ namespace DesignPatternExamples.StructuralPatterns
             Customer customer = new Customer("Ann McKinsey");
             bool eligible = mortgage.IsEligible(customer, 125000);
 
-            Console.WriteLine("\n" + customer.Name + " has been " + 
+            Console.WriteLine("\n" + customer.Name + " has been " +
                                      (eligible ? "Approved" : "Rejected"));
         }
 
