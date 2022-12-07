@@ -84,6 +84,13 @@ while (true)
             case 18:
                 StateSample.Create();
                 break;
+            case 19:
+                    VisitorSample.Create();
+                break;
+            case 20:
+                    TemplateSample.Create();
+                break;
+
 
 
             case 0:
