@@ -2,6 +2,7 @@
 using DesignPatternExamples.BehavioralPatterns;
 using DesignPatternExamples.CreationalPatterns;
 using DesignPatternExamples.StructuralPatterns;
+using System.Runtime.CompilerServices;
 
 Console.WriteLine("Welcome to desing patters");
 Console.WriteLine(new String('-', 30));
@@ -24,6 +25,8 @@ while (true)
 
     if (int.TryParse(myEntry, out int value))
     {
+
+       
 
         switch (Convert.ToInt32(myEntry))
         {
@@ -69,6 +72,9 @@ while (true)
             case 13:
                 CommandSample.Create();
                 break;
+            case 23:
+                CorWithStrategy.Create();
+                break;
             case 14:
                 IteratorSample.Create();
                 break;
@@ -84,6 +90,8 @@ while (true)
             case 18:
                 StateSample.Create();
                 break;
+
+
             case 19:
                     VisitorSample.Create();
                 break;
@@ -119,6 +127,23 @@ while (true)
 
 
 
+
+//public class RunSamples
+//{
+
+//    SortStrategy PickSample(int number) =>  switch
+//    {
+//        1 => AbstractFactoryCreate.Create(),
+//        _ => NotChosen()
+
+//    };
+
+//    public void NotChosen()
+//    {
+//        Console.WriteLine("not correct");
+//    }
+
+//}
 
 
 

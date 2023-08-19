@@ -22,6 +22,27 @@
             studentRecords.SetSortStrategy(new MergeSort());
             studentRecords.Sort();
         }
+
+        //private Dictionary<string, ISortStrategy> _strategyMap = new Dictionary<string, ISortStrategy>();
+
+        //public void AddSortStrategy(string name, ISortStrategy sortStrategy)
+        //{
+        //    _strategyMap[name] = sortStrategy;
+        //}
+
+        //public void SortArray(string strategyName, int[] array)
+        //{
+        //    if (_strategyMap.TryGetValue(strategyName, out ISortStrategy sortStrategy))
+        //    {
+        //        sortStrategy.Sort(array);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"Unknown strategy: {strategyName}");
+        //    }
+        //}
+
+
     }
 
     /// <summary>
