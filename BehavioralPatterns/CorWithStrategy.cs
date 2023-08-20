@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,22 +11,34 @@ namespace DesignPatternExamples.BehavioralPatterns
     //Chain og Responsibility with Strategy pattern
     public class CorWithStrategy
     {
-        public static void Create()
+        //private readonly ILogger<CorWithStrategy> _logger;
+
+        //public CorWithStrategy(ILogger<CorWithStrategy> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+        public static void Create(ILogger<CorWithStrategy> _logger) 
         {
 
-            RequestModel requestModel = new RequestModel();
-            requestModel.UserID = 1;
-            requestModel.FullAddress = "11 road AB1 3DC";
+           //var logger = LoggerFactory.Create().CreateLogger<CorWithStrategy>();
+
+            OrderModel OrderModel = new OrderModel();
+            OrderModel.UserID = 1;
+            OrderModel.FullAddress = "11 road AB1 3DC";
 
 
             IStoreProcessStrategy firstProcess = new CheckPayment();
 
-            while (firstProcess.NextRule != null) 
-            {
+            _logger.LogInformation("Started");
 
-                if(firstProcess.Run(requestModel))
+            while (firstProcess.NextProcess != null) 
+            {
+                _logger.LogInformation(DateTime.Now.TimeOfDay +  firstProcess.NextProcess?.ToString() ?? "");
+
+                if (firstProcess.Run(OrderModel))
                 {
-                    firstProcess = firstProcess.NextRule;
+                    firstProcess = firstProcess.NextProcess;
                 }
                 else
                 {
@@ -34,21 +47,19 @@ namespace DesignPatternExamples.BehavioralPatterns
                 }
             }
 
-            Console.WriteLine(requestModel.IsPaid);
-            Console.WriteLine(requestModel.IsPrepared);
-            Console.WriteLine(requestModel.IsCooked);
-            Console.WriteLine(requestModel.IsOutOfDelivery);
-
-
+            Console.WriteLine(OrderModel.IsPaid);
+            Console.WriteLine(OrderModel.IsPrepared);
+            Console.WriteLine(OrderModel.IsCooked);
+            Console.WriteLine(OrderModel.IsPacked);
+            Console.WriteLine(OrderModel.IsOutOfDelivery);
         }
-
     }
 
 
     public interface IStoreProcessStrategy
     {
-        public bool Run(RequestModel model);
-        public IStoreProcessStrategy NextRule { get; set; }
+        public bool Run(OrderModel model);
+        public IStoreProcessStrategy NextProcess { get; set; }
     }
 
     public class StoreProcessStrategy
@@ -56,7 +67,7 @@ namespace DesignPatternExamples.BehavioralPatterns
         public IStoreProcessStrategy NextProcess { get; set; }
     }
 
-    public class RequestModel
+    public class OrderModel
     {
 
         public int UserID { get; set; }
@@ -73,12 +84,10 @@ namespace DesignPatternExamples.BehavioralPatterns
     {
         public CheckPayment()
         {
-            NextRule = new CheckPrepared();
+            NextProcess = new CheckPrepared();
         }
 
-        public IStoreProcessStrategy NextRule { get; set; }
-
-        public bool Run(RequestModel model)
+        public bool Run(OrderModel model)
         {
             model.IsPaid = true;
             return true;
@@ -87,16 +96,48 @@ namespace DesignPatternExamples.BehavioralPatterns
 
     public class CheckPrepared : StoreProcessStrategy, IStoreProcessStrategy
     {
-        //public CheckPayment()
-        //{
-        //    NextRule = nextRule;
-        //}
-
-        public IStoreProcessStrategy NextRule {get; set; }
-
-        public bool Run(RequestModel model)
+        public CheckPrepared()
         {
-            throw new NotImplementedException();
+            NextProcess = new CheckCooked();
+        }
+
+        public bool Run(OrderModel model)
+        {
+            Thread.Sleep(1000);
+            model.IsPrepared = true;
+            return true;
+        }
+    }
+
+
+    public class CheckCooked : StoreProcessStrategy, IStoreProcessStrategy
+    {
+        public CheckCooked()
+        {
+            NextProcess = new CheckPacked();
+        }
+
+
+        public bool Run(OrderModel model)
+        {
+            Thread.Sleep(5000);
+            model.IsCooked = true;
+            return true;
+        }
+    }
+
+    public class CheckPacked : StoreProcessStrategy, IStoreProcessStrategy
+    {
+        public CheckPacked()
+        {
+            NextProcess = new CheckOutOfDelivery();
+        }
+
+        public bool Run(OrderModel model)
+        {
+            Thread.Sleep(1000);
+            model.IsPacked = true;
+            return true;
         }
     }
 
@@ -105,16 +146,28 @@ namespace DesignPatternExamples.BehavioralPatterns
     {
         public CheckOutOfDelivery()
         {
-            NextRule = null;
+            NextProcess = new CheckCompleted();
         }
 
-        public IStoreProcessStrategy NextRule { get; set; }
-
-        public bool Run(RequestModel model)
+        public bool Run(OrderModel model)
         {
-            throw new NotImplementedException();
+            Thread.Sleep(7000);
+            model.IsOutOfDelivery = true;
+            return true;
         }
     }
 
+    public class CheckCompleted : StoreProcessStrategy, IStoreProcessStrategy
+    {
+        public CheckCompleted()
+        {
+            NextProcess = null;
+        }
 
+        public bool Run(OrderModel model)
+        {
+            Thread.Sleep(1000);
+            return true;
+        }
+    }
 }

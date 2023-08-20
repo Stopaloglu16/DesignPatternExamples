@@ -1,8 +1,19 @@
-﻿namespace DesignPatternExamples.BehavioralPatterns
+﻿using System;
+
+namespace DesignPatternExamples.BehavioralPatterns
 {
     public class StrategySample
     {
-        public static void Create()
+
+        private static Dictionary<string, SortStrategy> _strategyMap = new Dictionary<string, SortStrategy>();
+
+        public static void AddSortStrategy(string name, SortStrategy sortStrategy)
+        {
+            _strategyMap[name] = sortStrategy;
+        }
+
+
+        public static void Create(bool IsShortVersion = false)
         {
             // Two contexts following different strategies
             SortedList studentRecords = new SortedList();
@@ -13,35 +24,40 @@
             studentRecords.Add("Vivek");
             studentRecords.Add("Anna");
 
-            studentRecords.SetSortStrategy(new QuickSort());
-            studentRecords.Sort();
 
-            studentRecords.SetSortStrategy(new ShellSort());
-            studentRecords.Sort();
+            if (IsShortVersion)
+            {
+                AddSortStrategy("QuickSort", new QuickSort());
+                AddSortStrategy("ShellSort", new ShellSort());
+                AddSortStrategy("MergeSort", new MergeSort());
 
-            studentRecords.SetSortStrategy(new MergeSort());
-            studentRecords.Sort();
+                foreach (var item in _strategyMap)
+                {
+                    if (_strategyMap.TryGetValue(item.Key, out SortStrategy sortStrategy))
+                    {
+                        studentRecords.SetSortStrategy(sortStrategy);
+                        studentRecords.Sort();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Unknown strategy: {item.Key}");
+                    }
+                }
+
+            }
+            else
+            {
+                studentRecords.SetSortStrategy(new QuickSort());
+                studentRecords.Sort();
+
+                studentRecords.SetSortStrategy(new ShellSort());
+                studentRecords.Sort();
+
+                studentRecords.SetSortStrategy(new MergeSort());
+                studentRecords.Sort();
+            }
+
         }
-
-        //private Dictionary<string, ISortStrategy> _strategyMap = new Dictionary<string, ISortStrategy>();
-
-        //public void AddSortStrategy(string name, ISortStrategy sortStrategy)
-        //{
-        //    _strategyMap[name] = sortStrategy;
-        //}
-
-        //public void SortArray(string strategyName, int[] array)
-        //{
-        //    if (_strategyMap.TryGetValue(strategyName, out ISortStrategy sortStrategy))
-        //    {
-        //        sortStrategy.Sort(array);
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine($"Unknown strategy: {strategyName}");
-        //    }
-        //}
-
 
     }
 
