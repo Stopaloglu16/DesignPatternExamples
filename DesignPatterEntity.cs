@@ -1,4 +1,6 @@
-﻿namespace DesignPatternExamples
+﻿using System.Net.Mime;
+
+namespace DesignPatternExamples
 {
     public class DesignPatterEntity
     {
@@ -16,6 +18,7 @@
         public static List<DesignPatterEntity> GetList()
         {
             int index = 1;
+            const string BehavioralPatterns = "Behavioral Patterns"; 
 
             List<DesignPatterEntity> myList = new List<DesignPatterEntity>() {
                     new DesignPatterEntity() {TypeName = "Creational Patterns",  Id = index, Name = "Abstract Method"}, //1
@@ -32,16 +35,18 @@
                     new DesignPatterEntity() {TypeName = "Structural Patterns", Id = ++index, Name = "Flyweight"},
                     new DesignPatterEntity() {TypeName = "Structural Patterns", Id = ++index, Name = "Proxy"},
 
-                    new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Command"},
+                     
+                    new DesignPatterEntity() {TypeName = BehavioralPatterns, Id = ++index, Name = "Command"}, //13
                     new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Interpreter"},
                     new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Iterator"},
                     new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Mediator"},
                     new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Memento"},
                     new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Observer"},
                     new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "State"},
-                    new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Strategy"},
+                    new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Strategy"}, //20
                     new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Template"},
-                    new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Visitor"}
+                    new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "Visitor" },
+                    new DesignPatterEntity() {TypeName = "Behavioral Patterns", Id = ++index, Name = "CorWithStrategy"} //23
 
             };
 

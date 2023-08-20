@@ -2,12 +2,24 @@
 using DesignPatternExamples.BehavioralPatterns;
 using DesignPatternExamples.CreationalPatterns;
 using DesignPatternExamples.StructuralPatterns;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 Console.WriteLine("Welcome to desing patters");
 Console.WriteLine(new String('-', 30));
 
 var myPatterns = DesignPatternExamples.DesignPatterList.GetList();
 
+ServiceProvider serviceProvider = new ServiceCollection()
+    .AddLogging((loggingBuilder) => loggingBuilder
+        .SetMinimumLevel(LogLevel.Trace)
+        .AddConsole()
+        )
+    .BuildServiceProvider();
+
+var logger = serviceProvider.GetService<ILoggerFactory>().CreateLogger<Program>();
+
+var logger1 = serviceProvider.GetRequiredService<ILogger<CorWithStrategy>>();
 
 DesignPatternExamples.DesignPatterList.WriteList(myPatterns);
 
@@ -16,7 +28,6 @@ DesignPatternExamples.DesignPatterList.WriteList(myPatterns);
 //keyValuePairs[1].DynamicInvoke(args);
 //list[0].DynamicInvoke(args);
 
-
 while (true)
 {
 
@@ -24,6 +35,8 @@ while (true)
 
     if (int.TryParse(myEntry, out int value))
     {
+
+       
 
         switch (Convert.ToInt32(myEntry))
         {
@@ -69,6 +82,9 @@ while (true)
             case 13:
                 CommandSample.Create();
                 break;
+            case 23:
+                CorWithStrategy.Create(logger1);
+                break;
             case 14:
                 IteratorSample.Create();
                 break;
@@ -84,6 +100,11 @@ while (true)
             case 18:
                 StateSample.Create();
                 break;
+
+            case 21:
+                StrategySample.Create(true);
+                break;
+
             case 19:
                     VisitorSample.Create();
                 break;
@@ -119,6 +140,23 @@ while (true)
 
 
 
+
+//public class RunSamples
+//{
+
+//    SortStrategy PickSample(int number) =>  switch
+//    {
+//        1 => AbstractFactoryCreate.Create(),
+//        _ => NotChosen()
+
+//    };
+
+//    public void NotChosen()
+//    {
+//        Console.WriteLine("not correct");
+//    }
+
+//}
 
 
 
